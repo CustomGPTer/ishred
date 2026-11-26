@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IShred: a free, offline file shredder and data eraser for Android</title>
+<meta name="description" content="IShred overwrites the files and folders you choose before deleting them, with eight overwrite methods, your own patterns, read-back checks, free-space overwrite and signed reports. No internet permission, no adverts, nothing to buy.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/ishred/">
+<meta name="theme-color" content="#f3f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1417" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IShred">
+<meta property="og:title" content="IShred: a free, offline file shredder and data eraser for Android">
+<meta property="og:description" content="IShred overwrites the files and folders you choose before deleting them, with eight overwrite methods, your own patterns, read-back checks, free-space overwrite and signed reports. No internet permission, no adverts, nothing to buy.">
+<meta property="og:url" content="https://customgpter.github.io/ishred/">
+<meta property="og:image" content="https://customgpter.github.io/ishred/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="IShred&#x27;s home screen: the shield logo, Leave less behind, a Choose files to erase button and device storage">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"IShred","url":"https://customgpter.github.io/ishred/","description":"IShred overwrites the files and folders you choose before deleting them, with eight overwrite methods, your own patterns, read-back checks, free-space overwrite and signed reports. No internet permission, no adverts, nothing to buy.","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 10 or later","softwareVersion":"1.0.2","downloadUrl":"https://github.com/CustomGPTer/ishred/releases/latest/download/IShred.apk","releaseNotes":"https://customgpter.github.io/ishred/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/ishred/assets/og.png","featureList":["Eight methods","Your own patterns","Read-back check","Free-space overwrite","Built-in file browser","Media and downloads","Duplicates and large files","SD cards and USB drives","Review and confirm","Protected folders","Checks before writing","Stops when it should"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is IShred really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts. Every method and tool is in the free app."}},{"@type":"Question","name":"Is it on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. IShred is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later."}},{"@type":"Question","name":"Can erased files be recovered?","acceptedAnswer":{"@type":"Answer","text":"IShred writes over the contents of each file before deleting it, so recovery apps that look for deleted files find only the new data. No app can promise more than that on a phone: flash storage moves data around inside the chip, and copies in backups, cloud services or other apps are outside any app's reach."}},{"@type":"Question","name":"Do more passes make it safer?","acceptedAnswer":{"@type":"Answer","text":"Not on a phone. One random pass is the recommended choice. Extra passes take longer and wear the storage more, and they cannot reach the hidden areas of a flash chip. The multi-pass methods are there for people who are asked to use them."}},{"@type":"Question","name":"What is the read-back check?","acceptedAnswer":{"@type":"Answer","text":"After writing each block, IShred reads it back and compares it with what it wrote. If they do not match, it stops on that file and reports it, rather than quietly deleting it."}},{"@type":"Question","name":"Why does it ask for All files access?","acceptedAnswer":{"@type":"Answer","text":"Only for its own file browser, duplicate finder and large-file review, and only if you choose them. You can erase files without it, using Android's file picker."}},{"@type":"Question","name":"Does it erase WhatsApp chats or other apps' data?","acceptedAnswer":{"@type":"Answer","text":"No. It can erase the photos and videos those apps save where other apps can see them, but not their private chat databases. No app with the same access can."}},{"@type":"Question","name":"Will it wipe my whole phone?","acceptedAnswer":{"@type":"Answer","text":"No. IShred erases what you choose. To clear a whole phone before passing it on, back up what you need and use the phone's own factory reset."}},{"@type":"Question","name":"What if I forget the app lock PIN?","acceptedAnswer":{"@type":"Answer","text":"There are no recovery codes. Use Android's Settings, Apps, IShred, Storage, Clear data. That removes IShred's settings and reports, not your files."}},{"@type":"Question","name":"How do I update it?","acceptedAnswer":{"@type":"Answer","text":"Settings, About, Check for a newer version opens the releases page. Download IShred.apk and install it over the old one. Do not uninstall first."}},{"@type":"Question","name":"Who made it?","acceptedAnswer":{"@type":"Answer","text":"IShred is made by Jonathan Jackson, an independent developer in the United Kingdom."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="IShred home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="isbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17463b"/><stop offset="1" stop-color="#0b1417"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#isbg)"/><g transform="translate(54 54) scale(1.12) translate(-54 -53.5)"><path d="M54,20 L80,31 L77,57 Q73,76 54,87 Q35,76 31,57 L28,31Z" fill="#62E9AE"/><path d="M54,28 L72,36 L69,55 Q66,68 54,77 Q42,68 39,55 L36,36Z" fill="#0f2a25"/><path d="M46,42 L46,60 M54,39 L54,66 M62,42 L62,60" fill="none" stroke="#62E9AE" stroke-width="4" stroke-linecap="round"/><path d="M38,52 L70,52" fill="none" stroke="#0f2a25" stroke-width="4"/></g></svg><span>IShred</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/ishred/releases/latest/download/IShred.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>Leave less behind.</h1>
+<p class="lede">IShred erases the photos, videos, documents and folders you pick, where they already are. It writes over each file's contents before deleting it, so ordinary recovery tools have nothing to put back together.</p><p class="lede">You choose how: one random pass, fixed patterns, the classic multi-pass sets or your own sequence, with an optional read-back check of every byte it writes. Each session ends with a signed report. IShred has no internet permission, so nothing about your files can leave the phone.</p>
+
+<p class="get" id="download"><a class="button" href="https://github.com/CustomGPTer/ishred/releases/latest/download/IShred.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p>
+<ul class="pills"><li>Version 1.0.2</li><li>Android 10 or later</li><li>362 KB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/home.png" alt="Home: choose files to erase, see how full the phone is, or browse files where they are." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet permission</b><span>IShred cannot go online at all.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>Nothing to buy</b><span>Every method and every tool is free.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No copies kept</b><span>Files are erased where they are; nothing is imported.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code with made-up files. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from IShred"><figure class="shot"><div class="phone"><img src="./assets/screens/home.png" alt="Home: choose files to erase, see how full the phone is, or browse files where they are." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Home: choose files to erase, see how full the phone is, or browse files where they are.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/erase.png" alt="Your selection: every file listed with its full location, the overwrite method and the read-back check, before anything happens." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Your selection: every file listed with its full location, the overwrite method and the read-back check, before anything happens.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/progress.png" alt="An erase part-way through: progress, pass, bytes written and time, with a Stop button. It carries on with the screen off." width="393" height="852" loading="eager" decoding="async"></div><figcaption>An erase part-way through: progress, pass, bytes written and time, with a Stop button. It carries on with the screen off.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/tools.png" alt="Privacy tools: media categories, messaging attachments, SD cards and USB drives, duplicates, large files and free-space overwrite." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Privacy tools: media categories, messaging attachments, SD cards and USB drives, duplicates, large files and free-space overwrite.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/reports.png" alt="Erasure reports: an encrypted record of every session, ready to export as a PDF or signed JSON." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Erasure reports: an encrypted record of every session, ready to export as a PDF or signed JSON.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/protected.png" alt="Protected folders: locations IShred will never erase or scan." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Protected folders: locations IShred will never erase or scan.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/settings.png" alt="Settings: themes, layouts, app lock, screen privacy and erasure defaults." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Settings: themes, layouts, app lock, screen privacy and erasure defaults.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/moreapps.png" alt="More apps: the developer&#x27;s other free apps, each opening its website in your browser." width="393" height="852" loading="eager" decoding="async"></div><figcaption>More apps: the developer&#x27;s other free apps, each opening its website in your browser.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/lock.png" alt="The optional app lock, with PIN, password or fingerprint." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The optional app lock, with PIN, password or fingerprint.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/home-light.png" alt="Light theme. IShred also has dark graphite and AMOLED black." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Light theme. IShred also has dark graphite and AMOLED black.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">IShred works on files in their own folders through Android's file picker or its own file browser. Nothing is copied into the app.</p>
+<ol class="steps"><li><h3>Choose</h3><p>Pick files or a whole folder, or browse photos, downloads, messaging attachments, an SD card or a USB drive. Protected folders are left out.</p></li><li><h3>Review</h3><p>See every file, its size and location, choose an overwrite method, then tick to confirm and hold the button for a second and a half.</p></li><li><h3>Erase</h3><p>IShred writes over each file, checks what it wrote if you asked, deletes it and keeps a signed record of exactly what happened.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Overwriting</h3><dl><div><dt>Eight methods</dt><dd>One random pass, zeros, ones, complementary, three-pass, seven-pass, the 35-pass Gutmann set, or delete only.</dd></div><div><dt>Your own patterns</dt><dd>1 to 50 random passes, or your own sequence of bytes and three-byte patterns.</dd></div><div><dt>Read-back check</dt><dd>Each block is written, flushed and read back. A mismatch stops that file and it is never just deleted instead.</dd></div><div><dt>Free-space overwrite</dt><dd>Fills the free space with random data and removes it again, keeping a margin you choose free.</dd></div></dl></div><div class="group"><h3>Finding files</h3><dl><div><dt>Built-in file browser</dt><dd>Search, sort by name, size or date, filter by type and select in bulk, with optional photo previews kept in memory only.</dd></div><div><dt>Media and downloads</dt><dd>Photos, camera files, videos, music, documents, downloads and thumbnail folders in a tap.</dd></div><div><dt>Duplicates and large files</dt><dd>Matching files found by size and SHA-256, and files over 25 MB, largest first. Nothing is ticked for you.</dd></div><div><dt>SD cards and USB drives</dt><dd>Any storage Android shows, through IShred's browser or the system picker.</dd></div></dl></div><div class="group"><h3>Safe by design</h3><dl><div><dt>Review and confirm</dt><dd>Tick to confirm, hold to erase, and type ERASE for big jobs.</dd></div><div><dt>Protected folders</dt><dd>Your own list of folders that can never be erased, as well as Android's system and app folders.</dd></div><div><dt>Checks before writing</dt><dd>A file that has changed, been swapped for a link or has more than one name is skipped.</dd></div><div><dt>Stops when it should</dt><dd>If the phone gets too hot or the battery drops below 15% unplugged, IShred stops and says why.</dd></div></dl></div><div class="group"><h3>Your records</h3><dl><div><dt>Signed reports</dt><dd>Each session's report is signed on the phone, so any later change to it shows.</dd></div><div><dt>PDF and JSON</dt><dd>Export a report to wherever you choose. File names are left out unless you switch them on.</dd></div><div><dt>Presets and reminders</dt><dd>Save a set of folders and a method, and an optional weekly reminder to review. Nothing is ever deleted on a schedule.</dd></div><div><dt>Contacts and clipboard</dt><dd>Delete chosen contacts, or clear the clipboard, when you ask.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">Private by design</h2>
+<ul class="plain"><li><h3>No internet at all</h3><p>IShred does not hold Android's internet permission. It cannot send anything anywhere.</p></li><li><h3>Nothing copied in</h3><p>Files are erased where they are. IShred keeps no copy of any photo, video or document.</p></li><li><h3>Encrypted records</h3><p>Settings, presets and reports are encrypted with a key held in the phone's secure hardware, and screenshots are blocked by default.</p></li></ul>
+</div>
+</section>
+
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">IShred is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called IShred.apk and is about 362 KB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>IShred never goes online, so it cannot check for updates itself. Settings, About, Check for a newer version opens the releases page in your browser. Install the new file over the old one: do not uninstall first, or your settings, presets and reports are lost.</p></li></ol>
+<p class="after-table">Version 1.0.2, released 26 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is IShred really free?</summary><p>Yes. There is no paid version, no subscription and no adverts. Every method and tool is in the free app.</p></details><details><summary>Is it on Google Play?</summary><p>No. IShred is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later.</p></details><details><summary>Can erased files be recovered?</summary><p>IShred writes over the contents of each file before deleting it, so recovery apps that look for deleted files find only the new data. No app can promise more than that on a phone: flash storage moves data around inside the chip, and copies in backups, cloud services or other apps are outside any app's reach.</p></details><details><summary>Do more passes make it safer?</summary><p>Not on a phone. One random pass is the recommended choice. Extra passes take longer and wear the storage more, and they cannot reach the hidden areas of a flash chip. The multi-pass methods are there for people who are asked to use them.</p></details><details><summary>What is the read-back check?</summary><p>After writing each block, IShred reads it back and compares it with what it wrote. If they do not match, it stops on that file and reports it, rather than quietly deleting it.</p></details><details><summary>Why does it ask for All files access?</summary><p>Only for its own file browser, duplicate finder and large-file review, and only if you choose them. You can erase files without it, using Android's file picker.</p></details><details><summary>Does it erase WhatsApp chats or other apps&#x27; data?</summary><p>No. It can erase the photos and videos those apps save where other apps can see them, but not their private chat databases. No app with the same access can.</p></details><details><summary>Will it wipe my whole phone?</summary><p>No. IShred erases what you choose. To clear a whole phone before passing it on, back up what you need and use the phone's own factory reset.</p></details><details><summary>What if I forget the app lock PIN?</summary><p>There are no recovery codes. Use Android's Settings, Apps, IShred, Storage, Clear data. That removes IShred's settings and reports, not your files.</p></details><details><summary>How do I update it?</summary><p>Settings, About, Check for a newer version opens the releases page. Download IShred.apk and install it over the old one. Do not uninstall first.</p></details><details><summary>Who made it?</summary><p>IShred is made by Jonathan Jackson, an independent developer in the United Kingdom.</p></details></div>
+</div>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Erase it properly</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="https://github.com/CustomGPTer/ishred/releases/latest/download/IShred.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="IShred home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="isbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17463b"/><stop offset="1" stop-color="#0b1417"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#isbg)"/><g transform="translate(54 54) scale(1.12) translate(-54 -53.5)"><path d="M54,20 L80,31 L77,57 Q73,76 54,87 Q35,76 31,57 L28,31Z" fill="#62E9AE"/><path d="M54,28 L72,36 L69,55 Q66,68 54,77 Q42,68 39,55 L36,36Z" fill="#0f2a25"/><path d="M46,42 L46,60 M54,39 L54,66 M62,42 L62,60" fill="none" stroke="#62E9AE" stroke-width="4" stroke-linecap="round"/><path d="M38,52 L70,52" fill="none" stroke="#0f2a25" stroke-width="4"/></g></svg><span>IShred</span></a>
+<p>&copy; 2026 Jonathan Jackson. IShred is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/ishred/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>
